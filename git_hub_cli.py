@@ -1,6 +1,9 @@
 import requests
-username  =  input()
+import sys
+
+username = sys.argv[1]
 url  = f'https://api.github.com/users/{username}/events'
+
 try :
     response = requests.get(url)
     print(response.status_code)
@@ -15,3 +18,4 @@ except requests.exceptions.RequestException as e:
     
 if __name__ == '__main__':
     pass 
+

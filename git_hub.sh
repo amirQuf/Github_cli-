@@ -1,3 +1,12 @@
-$url= 'https://api.github.com/users/{$1}/events' 
+username=$1
 
-curl -v https://api.github.com/users/{username}/events
+echo "$username"
+
+url='https://api.github.com/users/'$1'/events'
+
+echo "$url"
+
+
+response=curl $url
+
+echo "Output:"
